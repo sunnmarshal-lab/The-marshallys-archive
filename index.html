@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,59 +7,90 @@
     <title>The Wild Record</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            background: #111;
-            color: white;
+            background: #0d0d0d;
+            color: #f1f1f1;
             font-family: Arial, sans-serif;
         }
 
         header {
+            padding: 55px 25px 35px;
             text-align: center;
-            padding: 50px 20px;
         }
 
-        h1 {
+        header h1 {
             margin: 0;
-            font-size: 42px;
-            letter-spacing: 5px;
+            font-family: Georgia, serif;
+            font-size: clamp(32px, 7vw, 58px);
+            letter-spacing: 6px;
+            font-weight: normal;
         }
 
         header p {
-            color: #aaa;
-            margin-top: 12px;
+            margin: 14px 0 0;
+            color: #888;
+            font-size: 14px;
+            letter-spacing: 1px;
         }
 
         .gallery {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: auto;
             padding: 20px;
         }
 
         .record {
-            margin-bottom: 70px;
+            margin-bottom: 90px;
         }
 
         .record img {
             width: 100%;
+            height: auto;
             display: block;
         }
 
-        .info {
-            padding: 15px 0;
-            color: #aaa;
+        .record-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 2px;
+            border-bottom: 1px solid #292929;
         }
 
         .record-number {
-            color: white;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #aaa;
+        }
+
+        .location {
+            font-size: 13px;
+            color: #888;
+            text-align: right;
         }
 
         footer {
             text-align: center;
-            padding: 50px;
-            color: #666;
+            padding: 50px 20px;
+            color: #555;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 600px) {
+            .record-info {
+                display: block;
+            }
+
+            .location {
+                text-align: left;
+                margin-top: 8px;
+            }
         }
     </style>
 </head>
@@ -68,21 +99,28 @@
 
 <header>
     <h1>THE WILD RECORD</h1>
-    <p>A collection of moments found in nature.</p>
+    <p>A photographic record of places found in nature.</p>
 </header>
 
-<div class="gallery">
+<main class="gallery">
 
-    <div class="record">
+    <article class="record">
+
         <img src="20251017_143542.jpg" alt="Nature photograph">
 
-        <div class="info">
-            <div class="record-number">RECORD 001</div>
-            📍  Kyntaiai Valley, Mawsaw, Laitphlang, Meghalaya
-        </div>
-    </div>
+        <div class="record-info">
+            <div class="record-number">
+                RECORD 001
+            </div>
 
-</div>
+            <div class="location">
+                📍 Kyntaiai Valley, Mawsaw, Laitphlang, Meghalaya
+            </div>
+        </div>
+
+    </article>
+
+</main>
 
 <footer>
     THE WILD RECORD
